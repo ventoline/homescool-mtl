@@ -4,6 +4,9 @@ import mapboxgl from "mapbox-gl"
 import { useEffect, useRef } from "react"
 import { Centre } from "@/lib/parseCentres"
 
+console.log(process.env)
+console.log( process.env.NEXT_PUBLIC_MAPBOX_TOKEN)
+
 if (!process.env.NEXT_PUBLIC_MAPBOX_TOKEN) {
   console.warn("⚠️ Mapbox token missing")
 }
