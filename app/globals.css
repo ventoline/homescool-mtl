@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body defaults */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FFF8EE; /* subtle pastel background */
+  color: #1f2937; /* dark gray text */
+}
+
+/* Links */
+a {
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #3b82f6; /* subtle playful blue hover */
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
