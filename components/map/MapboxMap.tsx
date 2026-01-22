@@ -4,8 +4,6 @@ import mapboxgl from "mapbox-gl"
 import { useEffect, useRef } from "react"
 import { Centre } from "@/lib/parseCentres"
 
-console.log(process.env)
-console.log( process.env.NEXT_PUBLIC_MAPBOX_TOKEN)
 
 if (!process.env.NEXT_PUBLIC_MAPBOX_TOKEN) {
   console.warn("⚠️ Mapbox token missing")
@@ -20,14 +18,12 @@ export default function MapboxMap({ centres }: { centres: Centre[] }) {
 
     const map = new mapboxgl.Map({
       container: mapRef.current,
-      style: "mapbox://styles/mapbox/streets-v12",
-      center: [-73.5673, 45.5017],
-      zoom: 11,
+      style: "mapbox://styles/ventoline/cmkn5sh00002d01s4bgfc0w8a",//"mapbox://styles/mapbox/streets-v12",
+      center: [-73.738587, 45.4989],
+      zoom: 10,
     })
 
-    centres.forEach((c) => {
-      new mapboxgl.Marker().setLngLat([c.lng, c.lat]).addTo(map)
-    })
+    
 
     return () => map.remove()
   }, [centres])

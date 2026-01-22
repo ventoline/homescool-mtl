@@ -1,0 +1,163 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "la 2e classe",
+        "link": "https://la2eclasse.com",
+        "type": "soutien scolaire"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.288086,
+          45.525946
+        ],
+        "type": "Point"
+      },
+      "id": "005e5e03da3ac84f78c2e22f8c339a61"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jardin Urbain",
+        "def": "",
+        "address": "",
+        "link": "jardinurbin.ca",
+        "type": "centre"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.607372,
+          45.536536
+        ],
+        "type": "Point"
+      },
+      "id": "0c822d22b78a349692c8fac70424e240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ferme Quinn",
+        "type": "activity",
+        "link": "",
+        "address": "",
+        "def": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -73.926786,
+          45.363774
+        ],
+        "type": "Point"
+      },
+      "id": "0f5955bdaaff83aaf7f79e9594f47030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Space Parallel",
+        "address": "",
+        "def": "",
+        "link": "https://apprentissages.ca/ecole-a-la-maison",
+        "type": "centre"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.583214,
+          45.530763
+        ],
+        "type": "Point"
+      },
+      "id": "23ca26010ce7679108991e41423a43ad"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nook",
+        "address": "",
+        "link": "http://nookhomeschoolers.com",
+        "type": "centre",
+        "def": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -73.866396,
+          45.424993
+        ],
+        "type": "Point"
+      },
+      "id": "291eb8814ceefb72e86e2e5bb4329dee"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "mont - libre",
+        "address": "",
+        "def": "",
+        "link": "https://montlibre.org/",
+        "type": "centre"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.607743,
+          45.538111
+        ],
+        "type": "Point"
+      },
+      "id": "7761f4b7970760df094e215f47fe8d70"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": ".time4learning",
+        "link": "https://www.time4learning.com/",
+        "type": "shop"
+      },
+      "geometry": {
+        "coordinates": [
+          -96.829834,
+          32.994084
+        ],
+        "type": "Point"
+      },
+      "id": "87975da04d323a9ab9f9a458b1f8259d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Imagily",
+        "address": "",
+        "def": "",
+        "link": "https://boundless-studios.org",
+        "type": "centre"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.597743,
+          45.483791
+        ],
+        "type": "Point"
+      },
+      "id": "bdd0d5ae4bb53d0cc85db32755d864d5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Communidee",
+        "def": "Centre Communide",
+        "link": "communidee.ca",
+        "address": "",
+        "type": "centre"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.582246,
+          45.47506
+        ],
+        "type": "Point"
+      },
+      "id": "f9e43f28f9e871afee072182f5bf4040"
+    }
+  ],
+  "type": "FeatureCollection"
+}

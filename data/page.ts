@@ -1,5 +1,5 @@
 export const pageData = {
-  h1: "Centres d’instruction à domicile à Montréal",
+  h1: "Centres d'école à la maison à Montréal",
   intro:
-    "Découvrez les principaux centres et ressources d’instruction à domicile à Montréal pour accompagner l’éducation de votre enfant."
+    "Les centres de Montréal de l'ecole à la maison/ homeschooling et ressources pour accompagner l’éducation de votre enfant."
 }
