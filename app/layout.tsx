@@ -1,6 +1,15 @@
 import "./globals.css"
 import type { ReactNode } from "react"
-import { Inter, Roboto,Leckerli_One  } from "next/font/google";
+import { Inter, Roboto,Leckerli_One, Pacifico, Sour_Gummy, Borel, Bonheur_Royale  } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 
 
 const inter = Inter({
@@ -14,7 +23,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-const leckerli = Leckerli_One({
+const leckerli = Borel({
   weight: '400', // Leckerli One only has one weight
   subsets: ['latin'], // Or other subsets if needed
   variable: "--font-leckerli",
@@ -28,11 +37,17 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+
+
+
   return (
     <html lang="fr"  className={`${inter.variable} ${roboto.variable} ${leckerli.variable}`}>
+      
       <body className="bg-[#FFF8EE] text-gray-800 font-sans">
+       
         {children}
-      </body>
+         <GoogleAnalytics gaId="G-3TPJ06NTX1" />
+     </body>
     </html>
   )
 }

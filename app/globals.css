@@ -15,6 +15,9 @@ html {
   scroll-behavior: smooth;
 }
 
+body{  overflow-x: hidden;
+}
+
 h1{
   font-family: leckerli, serif;
 }
@@ -27,18 +30,53 @@ body {
 }
 
 /* Links */
-a {font-family: leckerli, serif;
-  transition: color 0.2
+a {font-family: var(--font-leckerli), cursive;
+  transition: color 0.2;
+    color: #56b1db; /* subtle playful blue hover */
+
   
 }
 
 a:hover {
-  color: #56b1db; /* subtle playful blue hover */
+  color: #00aeff; /* subtle playful blue hover */
 }
 
 /* Headings */
-h2, h3, h4 {
+h2, h4 {
   font-family: 'Poppins', sans-serif;
 }
 
-h1{font-family: var(--font-leckerli), cursive;}
+h3{
+  font-family: var(--font-leckerli), cursive;
+}
+
+h1{font-family: var(--font-leckerli), cursive;
+   text-shadow: 
+    2px 2px 3px rgba(255, 255, 255, 0.15),
+    -2px -2px 3px rgba(0, 0, 0, 0.35);  /* */  /* Highlight effect */ /* Shadow effect */ 
+  
+
+  /* 4. Clip the background to the text shape */
+  -webkit-background-clip: text; /* Required for Chrome, Safari */
+  background-clip: text; }
+
+   .hero{
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+   }   
+
+   .card-name{    cursor: crosshair; user-select: none;
+}
+
+.mapboxgl-ctrl-attrib-inner a{  margin-top:-20px;font-family: 'Poppins', sans-serif !important;
+
+}
+
+.mapboxgl-ctrl-attrib-inner{margin-top: -20px;}
+
+.contact-box  a{color: var(--color-gray-200); font-family: 'Poppins', sans-serif !important;
+  transition: color 0.2;
+;}
+
+.contact-box  a:hover{color: var(--color-gray-500); font-family: 'Poppins', sans-serif !important;
+  transition: color 0.2;}
+

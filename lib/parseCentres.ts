@@ -1,4 +1,4 @@
-import fso from "fs"
+import fso from "fs";
 import { promises as fs } from 'fs';
 import process from 'process'; // May need to import process
 

@@ -1,13 +1,28 @@
+"use client";
 import { Centre } from "@/lib/parseCentres"
 import { useMapboxMap } from "@/components/MapContext";
 import { useRef } from "react";
 
 
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 export default function CentreCard({ centre }: { centre: Centre }) {
       const map = useMapboxMap();
   const hoveredIdRef = useRef<any>(null);
-  const flyToCenter = (c: any) => {
 
+
+function trackCenterSelect(center: { id: string; name: string }) {
+  window.gtag?.("event", "select_center", {
+    center_id: center.id,
+    center_name: center.name,
+  });
+}
+
+  const flyToCenter = (c: any) => {
 
 
     if (!map || c.lng == null || c.lat == null) return;
@@ -27,17 +42,20 @@ export default function CentreCard({ centre }: { centre: Centre }) {
   
 }
 
+
+
   return (
-    <article className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+    <article className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
    <div   key={centre.id}
           onMouseEnter={() => flyToCenter(centre)}
         //  onMouseLeave={clearHoverState}
         >
-      <h2    className="text-xl font-semibold mb-2 text-purple-700">{centre.name}</h2>
+      <h2    className=" card-name text-xl font-semibold mb-2 text-indigo-700">{centre.name}</h2>
       </div> 
-      <p className="mb-2 text-gray-700">{centre.description}</p>
+      <p className="mb-2 text-blue-600">{centre.description}</p>
       <p className="text-sm text-gray-500 mb-2">{centre.address}</p>
-      <a
+      <a   onClick={() => trackCenterSelect({id:centre.id, name:centre.name})}
+
         href={centre.website}
         target="_blank"
         rel="nofollow sponsored"
