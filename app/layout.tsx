@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-[#FFF8EE] text-gray-800 font-sans">
        
         {children}
-         <GoogleAnalytics gaId="G-3TPJ06NTX1" />
+         <GoogleAnalytics gaId="G-C9JT8FBDFQ" />
      </body>
     </html>
   )
