@@ -2,6 +2,7 @@ import "./globals.css"
 import type { ReactNode } from "react"
 import { Inter, Roboto,Leckerli_One, Pacifico, Sour_Gummy, Borel, Bonheur_Royale  } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 
 
@@ -47,6 +48,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
        
         {children}
          <GoogleAnalytics gaId="G-3TPJ06NTX1" />    {/*GTM-MJQ8TTRH" />   "G-3TPJ06NTX1" /> */}
+          <Script
+          id="adsense-script"
+          async
+          strategy="afterInteractive"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+        />
      </body>
     </html>
   )

@@ -5,6 +5,7 @@ import CentreList from "@/components/listicle/CentreList"
 import MapList from "@/components/MapList"
 import MapboxMap from "@/components/map/MapboxMap"
 //import PageAnalytics from "@/components/AnalyticsPage"
+import AdUnit from "@/components/AdBlock";
 
 declare global {
   interface Window {
@@ -21,10 +22,11 @@ export default function Page() {
 
 
       {/* Ads placeholder */}
-      <div className="my-8 text-center">
+      <div className="my-2 text-center">
         <div className="border border-gray-300 p-4 rounded-md bg-white shadow-sm">
-          <span className="text-gray-500"><i>Votre annonce ici</i></span>
-        </div>
+        <AdUnit  slot="1453151522143278"/>  
+{/*         <span className="text-gray-500"><i>Votre annonce ici</i></span>
+ */}        </div>
       </div>
 
       <section  className="grid"/*  className="grid lg:grid-cols-2 gap-10" */>
@@ -44,7 +46,7 @@ export default function Page() {
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
         <ul className="space-y-2">
           <li>
-            <a href="/ressources" className="text-blue-600 underline"  onClick={()=> window.gtag?.("event", "goto_resources")} /**/>
+            <a href="/ressources" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
 ressources pour l'école a la maison - Homeschooling         </a>
           </li>
           <li>
