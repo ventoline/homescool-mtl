@@ -31,7 +31,7 @@ const leckerli = Borel({
 
 
 export const metadata = {
-  title: "Centres d’instruction à domicile à Montréal",
+  title: "Centres de Homeschooling - école a la maison - Montréal",
   description:
     "Liste complète et mise à jour des centres d’instruction à domicile à Montréal.",
 }

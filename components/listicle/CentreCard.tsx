@@ -15,10 +15,10 @@ export default function CentreCard({ centre }: { centre: Centre }) {
   const hoveredIdRef = useRef<any>(null);
 
 
-function trackCenterSelect(center: { id: string; name: string }) {
-  window.gtag?.("event", "select_center", {
+function trackCenterSelect(center: { id: string; nameId: string }) {
+  window.gtag?.("event", `select_center${center.nameId}`, {
     center_id: center.id,
-    center_name: center.name,
+    center_name: center.nameId,
   });
 }
 
@@ -54,7 +54,7 @@ function trackCenterSelect(center: { id: string; name: string }) {
       </div> 
       <p className="mb-2 text-blue-600">{centre.description}</p>
       <p className="text-sm text-gray-500 mb-2">{centre.address}</p>
-      <a   onClick={() => trackCenterSelect({id:centre.id, name:centre.name})}
+      <a   onClick={() => trackCenterSelect({id:centre.id, nameId:centre.name})}
 
         href={centre.website}
         target="_blank"
