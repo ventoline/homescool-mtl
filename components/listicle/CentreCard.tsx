@@ -16,10 +16,17 @@ export default function CentreCard({ centre }: { centre: Centre }) {
 
 
 function trackCenterSelect(center: { id: string; nameId: string }) {
-  window.gtag?.("event", `select_center${center.nameId}`, {
+  window.gtag?.("event", `select_center`, {
+    center_id: center.id,
+    center_name: center.nameId
+  });
+
+/*     window.gtag?.("event", `select_center${center.nameId}`, {
     center_id: center.id,
     center_name: center.nameId,
   });
+ */
+  
 }
 
   const flyToCenter = (c: any) => {

@@ -44,12 +44,12 @@ export default function Page() {
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
         <ul className="space-y-2">
           <li>
-            <a href="/ressources" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_resources")} */>
-ressources pour l'école a la maison            </a>
+            <a href="/ressources" className="text-blue-600 underline"  onClick={()=> window.gtag?.("event", "goto_resources")} /**/>
+ressources pour l'école a la maison - Homeschooling         </a>
           </li>
           <li>
             <a href="/activites-enfants" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
-              Activités pour enfants a Montréal
+              Activités pour homeschoolers - Montréal
             </a>
           </li>
         </ul>
