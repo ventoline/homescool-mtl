@@ -44,6 +44,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr"  className={`${inter.variable} ${roboto.variable} ${leckerli.variable}`}>
       
+      <meta name="google-adsense-account" content="ca-pub-1453151522143278" />
+
       <body className="bg-[#FFF8EE] text-gray-800 font-sans">
        
         {children}
