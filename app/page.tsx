@@ -42,7 +42,7 @@ export default function Page() {
       </section>
 
       {/* Related links */}
-      <section className="mt-16 w-1/3 float-left">
+      <section className="mt-16 w-1/2 float-left">
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
         <ul className="space-y-2">
           <li>
