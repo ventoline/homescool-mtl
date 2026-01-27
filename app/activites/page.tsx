@@ -3,11 +3,11 @@ import { getCentres, parseGeoJSONToItems } from "@/lib/parseCentres"
 import Hero from "@/components/listicle/Hero"
 import CentreList from "@/components/listicle/CentreList"
 import MapList from "@/components/MapList"
-import OutLinks from "@/components/OutLinks"
 import MapboxMap from "@/components/map/MapboxMap"
 //import PageAnalytics from "@/components/AnalyticsPage"
 import AdUnit from "@/components/AdBlock";
 import Image from "next/image";
+import { defaultConfig } from "next/dist/server/config-shared"
 
 
 declare global {
@@ -16,27 +16,25 @@ declare global {
   }
 }
 
-export default function Page() {
+export default function RessourcesPage() {
   const centres = parseGeoJSONToItems()//GEOJson 
   // getCentres()//XML
   return (
     <main className="max-w-7xl mx-auto px-4  mt-0">
 
 
-      <Hero title= 'Cantres de Homeschooling' />
+      <Hero title = {'Activités pour Homeschoolers'}/>
     <section  className="grid">
       <div className="grid gap-4 md:grid-cols-[2fr_1fr] p-3">
 <div>  <p> <span className="text-gray-500">
-   Pratiquer l’école à la maison peut être exigeant, il existe des centres à Montréal de structure et philosophie variées. 
-    Trouver ces centres dans le paysage constamment en mouvement n'est pas toujours mince affaire. 
-    
+  L'emploi du temps de l'enfant hors système scolaire offre une multitude de possibilités. Que ce soit en complément de l'éducation à la maison, ou en soutien scolaire. Il existe des services adaptés aux besoins et envie des homeschoolers! 
 </span> </p> 
 <br/>
 
 <p>
 
 
-<h2> Ici les 6 principaux centres avec les infos pour diriger et rejoindre les coopératives de familles partageant les valeurs proches.
+<h2> Les meilleures activites pour homeschoolers a Montreal!
   </h2></p>
   </div>
  <div  className="bg-black"> <Image   className="h-50 w-full object-cover"
@@ -59,9 +57,9 @@ export default function Page() {
       {/* Ads placeholder */}
    <div className="my-2 text-center">
         <div className="border border-gray-300 p-4 rounded-md bg-white shadow-sm">
-     <AdUnit  slot="1453151522143278"/>  
-      {/*      <span className="text-gray-500"><i>Votre annonce ici</i></span>
- */}        </div>
+       {/*     <AdUnit  slot="1453151522143278"/>   */}  
+     <span className="text-gray-500"><i>Votre annonce ici</i></span>
+      </div>
       </div>
 
       <section  className="grid"/*  className="grid lg:grid-cols-2 gap-10" */>
@@ -79,9 +77,20 @@ export default function Page() {
       {/* Related links */}
       <section className="mt-16 w-1/2 float-left">
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
-
-      <OutLinks />
-      
+        <ul className="space-y-2">
+          <li>
+            <a href="/" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Centres de l'école a la maison - Homeschooling a Montreal      </a>
+          </li>  <li>
+            <a href="/ressources" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Soutient - Communaute pour l'école a la maison - Homeschooling         </a>
+          </li>
+          <li>
+            <a href="/communaute" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
+             Soutient - Communautes Homeschooling   
+            </a>
+          </li>
+        </ul>
       </section>
         {/* contact */}
         <section className="my-2 text-center w-1/2 float-right mt-20">

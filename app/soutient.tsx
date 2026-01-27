@@ -3,7 +3,6 @@ import { getCentres, parseGeoJSONToItems } from "@/lib/parseCentres"
 import Hero from "@/components/listicle/Hero"
 import CentreList from "@/components/listicle/CentreList"
 import MapList from "@/components/MapList"
-import OutLinks from "@/components/OutLinks"
 import MapboxMap from "@/components/map/MapboxMap"
 //import PageAnalytics from "@/components/AnalyticsPage"
 import AdUnit from "@/components/AdBlock";
@@ -23,7 +22,7 @@ export default function Page() {
     <main className="max-w-7xl mx-auto px-4  mt-0">
 
 
-      <Hero title= 'Cantres de Homeschooling' />
+      <Hero />
     <section  className="grid">
       <div className="grid gap-4 md:grid-cols-[2fr_1fr] p-3">
 <div>  <p> <span className="text-gray-500">
@@ -79,9 +78,20 @@ export default function Page() {
       {/* Related links */}
       <section className="mt-16 w-1/2 float-left">
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
-
-      <OutLinks />
-      
+        <ul className="space-y-2">
+          <li>
+            <a href="/ressources" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Ressources pour l'école a la maison - Homeschooling         </a>
+          </li>  <li>
+            <a href="/ressources" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Soutient - Communaute pour l'école a la maison - Homeschooling         </a>
+          </li>
+          <li>
+            <a href="/activites-enfants" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
+              Activités pour homeschoolers - Montréal
+            </a>
+          </li>
+        </ul>
       </section>
         {/* contact */}
         <section className="my-2 text-center w-1/2 float-right mt-20">

@@ -42,7 +42,12 @@ a:hover {
 }
 
 /* Headings */
-h2, h4 {
+ h4 {
+  font-family: 'Poppins', sans-serif;
+}
+h2 {
+  font-size: larger;
+  font-weight: bolder;
   font-family: 'Poppins', sans-serif;
 }
 
