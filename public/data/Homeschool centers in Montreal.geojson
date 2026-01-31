@@ -5,7 +5,9 @@
       "properties": {
         "name": "la 2e classe",
         "link": "https://la2eclasse.com",
-        "type": "soutien scolaire"
+        "type": "service",
+        "def": "soutient scolaire",
+        "address": ""
       },
       "geometry": {
         "coordinates": [
@@ -19,10 +21,28 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "le char bleu",
+        "address": "",
+        "def": "fun exercise classes activity days for older homeschoolers (10+) board games (chess, backgammon, among others) recreational ping-pong",
+        "link": "www.centrechatbleu.com",
+        "type": "service"
+      },
+      "geometry": {
+        "coordinates": [
+          -72.13693,
+          45.261951
+        ],
+        "type": "Point"
+      },
+      "id": "08a75d4969870e05f4cdeab577583700"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Jardin Urbain",
         "def": "",
         "address": "",
-        "link": "jardinurbin.ca",
+        "link": "https://www.jardinurbin.ca",
         "type": "centre"
       },
       "geometry": {
@@ -91,6 +111,60 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "centre pastel",
+        "address": "",
+        "link": "https://centrepastel.org/",
+        "def": "Pour l’enfant de 6 à 10 ans. Le Centre propose un environnement «comme à la maison» qui offre sécurité et chaleur au jeune enfant de moins de 10 ans.. ",
+        "type": "centre"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.635056,
+          45.498984
+        ],
+        "type": "Point"
+      },
+      "id": "2ecef25c16ae10e37f07493196ad8883"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Éditions RDL",
+        "link": "https://www.editionsrdl.com/",
+        "address": "succursale des Boulevards, C, Laval, QC H7N 5J4",
+        "type": "site",
+        "def": "outils éducatifs favorisant l'apprentissage autonome"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.712672,
+          45.559704
+        ],
+        "type": "Point"
+      },
+      "id": "2f36a534cbf90c9846cb8bcc8360fc60"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "programmes coyotte",
+        "link": "https://www.programmescoyote.ca/",
+        "address": "",
+        "def": "L’apprentissage ancré dans la nature.",
+        "type": "service"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.636336,
+          45.44238
+        ],
+        "type": "Point"
+      },
+      "id": "65bc232c46f5afbb9f78c969837f8ce2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "mont - libre",
         "address": "",
         "def": "",
@@ -125,6 +199,24 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Fabricatheque sud ouest",
+        "address": "",
+        "def": "",
+        "link": "https://montreal.ca/lieux/fabricatheque-du-sud-ouest",
+        "type": "service"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.589529,
+          45.472101
+        ],
+        "type": "Point"
+      },
+      "id": "ad551d3007ef852afcc4f99f5c33b83c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Imagily",
         "address": "",
         "def": "",
@@ -143,9 +235,27 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "340 Bd Cartier O, Laval, QC H7N 2J6",
+        "name": "TAKI",
+        "def": "",
+        "link": "www.takilecentre.cahttps://www.takilecentre.ca/",
+        "type": "centre"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.707936,
+          45.551821
+        ],
+        "type": "Point"
+      },
+      "id": "dedcd37cde7c812cf194b93432a9dca1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Communidee",
         "def": "Centre Communide",
-        "link": "communidee.ca",
+        "link": "https://www.communidee.ca",
         "address": "",
         "type": "centre"
       },

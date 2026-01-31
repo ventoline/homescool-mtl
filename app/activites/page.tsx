@@ -16,8 +16,8 @@ declare global {
   }
 }
 
-export default function RessourcesPage() {
-  const centres = parseGeoJSONToItems()//GEOJson 
+export default async function RessourcesPage() {
+  const centres = await parseGeoJSONToItems()//GEOJson 
   // getCentres()//XML
   return (
     <main className="max-w-7xl mx-auto px-4  mt-0">
@@ -31,11 +31,11 @@ export default function RessourcesPage() {
 </span> </p> 
 <br/>
 
-<p>
+<p></p>
 
 
 <h2> Les meilleures activites pour homeschoolers a Montreal!
-  </h2></p>
+  </h2>
   </div>
  <div  className="bg-black"> <Image   className="h-50 w-full object-cover"
 
@@ -63,7 +63,7 @@ export default function RessourcesPage() {
       </div>
 
       <section  className="grid"/*  className="grid lg:grid-cols-2 gap-10" */>
-   <MapList centres={centres}/> 
+   <MapList centres={centres} filter= {'service'}/> 
   </section>
 
 

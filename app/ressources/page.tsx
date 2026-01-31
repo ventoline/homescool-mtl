@@ -1,5 +1,3 @@
-
-import { getCentres, parseGeoJSONToItems } from "@/lib/parseCentres"
 import Hero from "@/components/listicle/Hero"
 import CentreList from "@/components/listicle/CentreList"
 import MapList from "@/components/MapList"
@@ -9,6 +7,8 @@ import AdUnit from "@/components/AdBlock";
 import Image from "next/image";
 import { defaultConfig } from "next/dist/server/config-shared"
 import Link from "next/link";
+import CardList from "@/components/CardList"
+import { useData } from "@/components/DataProvider";
 
 
 declare global {
@@ -18,8 +18,7 @@ declare global {
 }
 
 export default function RessourcesPage() {
-  const centres = parseGeoJSONToItems()//GEOJson  // getCentres()//XML
-
+ 
   return (
     <main className="max-w-7xl mx-auto px-4  mt-0">
 
@@ -27,16 +26,20 @@ export default function RessourcesPage() {
       <Hero title={"Ressources pour le Homeschooling"}/>
     <section  className="grid">
       <div className="grid gap-4 md:grid-cols-[2fr_1fr] p-3">
-<div>  <p> <span className="text-gray-500">
-  Appliquer une pédagogie alternative peut s'avérer complexe à gérer et il est confortant de trouver les outils et programmes, alternatives éducatives. Mais aussi s'appuyer sur la communauté pour échanger sur les pédagogies ou réseauter et partager avec des familles qui partagent notre aventure. 
-</span> </p> 
+<div>  <p className="text-gray-500"> 
+  Appliquer une pédagogie alternative peut s'avérer complexe à gérer et il est confortant de trouver les outils et programmes,
+   alternatives éducatives. </p>
+   <p>
+  Ainsi qu de s'appuyer sur <a href='/communaute'>la communauté</a> pour échanger sur les pédagogies ou réseauter et partager 
+   avec des familles qui partagent notre aventure. 
+ </p> 
 <br/>
 
-<p>
+<p></p>
 
 
 <h2> Trouve ici les liens pour naviguer l'école a la maison
-  </h2></p>
+  </h2>
   </div>
  <div  className="bg-black"> <Image   className="h-50 w-full object-cover"
 
@@ -64,7 +67,8 @@ export default function RessourcesPage() {
       </div>
 
       <section  className="grid"/*  className="grid lg:grid-cols-2 gap-10" */>
-   <MapList centres={centres}/> 
+  {/*  <MapList centres={centres}/>  */}
+   <CardList type={'ressources'}/> 
   </section>
 
 

@@ -5,6 +5,9 @@ import MapList from "@/components/MapList"
 import AdUnit from "@/components/AdBlock";
 import Image from "next/image";
 import Link from "next/link";
+import CentreList from "@/components/listicle/CentreList";
+import { DataProvider } from "@/components/DataProvider";
+import RefList from "@/components/RefList";
 
 
 declare global {
@@ -14,7 +17,10 @@ declare global {
 }
 
 export default function RessourcesPage() {
-  const centres = parseGeoJSONToItems()//GEOJson 
+
+
+ //// const centres = parseGeoJSONToItems()//GEOJson 
+ // console.log('parsed centres', centres)
   // getCentres()//XML
   return (
     <main className="max-w-7xl mx-auto px-4  mt-0">
@@ -30,9 +36,9 @@ réseauter.
 </span> </p> 
 <br/>
 
-<p>
+<p></p>
 <h2> Incontournables pour naviguer l'ecole a la maison a Montreal.
-  </h2></p>
+  </h2>
   </div>
  <div  className="bg-black"> <Image   className="h-50 w-full object-cover"
 
@@ -59,16 +65,16 @@ réseauter.
        </div>
       </div>
 
-      <section  className="grid"/*  className="grid lg:grid-cols-2 gap-10" */>
+       {/*<section  className="grid">
    <MapList centres={centres}/> 
-  </section>
+ </section> */}
 
 
 
   {/*  Listicles */}
-      <section className="grid lg:grid-cols-2 gap-10">
-       {/* <CentreList centres={centres} />
-        <MapboxMap centres={centres} /> */ }
+      <section /* className="grid lg:grid-cols-2 gap-10" */>
+      <RefList  type={'admin'} />
+
       </section>
 
       {/* Related links */}
@@ -91,6 +97,8 @@ Ressources pour l'école a la maison
           </li>
         </ul>
       </section>
+
+
         {/* contact */}
         <section className="my-2 text-center w-1/2 float-right mt-20">
 

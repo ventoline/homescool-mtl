@@ -1,4 +1,3 @@
-import { pageData } from "@/data/page"
 
 export default function Hero({ title =  'Ressources Homeschooling'}: { title?: string }) {
 

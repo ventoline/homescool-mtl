@@ -1,0 +1,47 @@
+<data>
+  <CDSSM name="CDSSM" link="https://www.cssdm.gouv.qc.ca/formation-jeunes/enseignement-maison/" def="Centre de services scolaire de Montréal" type="admin" />
+  <Gov_QC name="Gov QC" link="https://www.quebec.ca/education/prescolaire-primaire-et-secondaire/programmes-formations-evaluation/enseignement-maison" def="S'informer sur le fonctionnement de l'enseignement à la maison et l'accompagnement offert aux parents. Se connecter à l'espace sécurisé et transmettre les documents requis." type="admin" />
+  <ESMB name="ESMB" link="https://www.emsb.qc.ca/csem/services/services-centraux/enseignement-a-la-maison" def="English Montreal School Board" type="admin" />
+  <quebec.ca name="quebec.ca" link="https://www.quebec.ca/education/prescolaire-primaire-et-secondaire/programmes-formations-evaluation/enseignement-maison" def="Guide d'accompagnement pour les parents" type="admin" />
+  <Homeschool_Help_in_Canada___HSLDA name="Homeschool Help in Canada | HSLDA" link="https://hslda.ca/" def="HSLDA is Canada's most trusted homeschool organization. We advocate for homeschool freedom in our country's courts and legislatures." type="admin" />
+  <prodigy_ name="prodigy" link="https://www.prodigygame.com/main-en/blog/homeschooling-resources?utm_source=chatgpt.com" def="" type="admin" />
+  <Boukili_ name="Boukili" link="https://boukili.ca/" def="Partagez l'amour de la lecture en français avec les petits dès 4 ans" type="app" />
+  <ben_le_koala name="ben le koala" link="https://benlekoala.com/" def="Ben offre des outils pédagogiques gratuits aux parents et professionnels, pour accompagner l’enfant là où il est." type="app" />
+  <Allo_Prof name="Allo Prof" link="https://www.alloprof.qc.ca/" def="services d'accompagnement" type="ressources" />
+  <Ecole_Ouverte name="Ecole Ouverte" link="https://ecoleouverte.ca/" def="un éventail de ressources à l’ensemble du réseau scolaire québécois;" type="ressources" />
+  <Allo_Prof_parents name="Allo Prof parents" link="https://www.alloprof.qc.ca/fr/parents" def="ressources-pour-accompagner-votre-enfant" type="ressources" />
+  <Allo_francais name="Allo francais" link="https://allofrancais.ca/" def="Une tonne d’outils gratuits pour t’aider à progresser en français" type="ressources" />
+  <CBC_Curio name="CBC Curio" link="https://curio.ca/fr" def="votre ressource pour trouver des contenus de CBC/Radio-Canada sélectionnés avec soin pour leur pertinence dans l'enseignement de chaque matièr" type="ressources" />
+  <ONF_Edu name="ONF Edu" link="https://www.onf.ca/education/" def="Ressources d’apprentissage pour esprits curieux" type="ressources" />
+  <Recitus name="Recitus" link="https://primaire.recitus.qc.ca/" def="Histoire du Quebec pour la primaire" type="ressources" />
+  <DEM_direction_enseignement_a_la_maison name="DEM direction enseignement a la maison" link="https://csforall.org/fr" def="l'enseignement de l'informatique à la portée de tous les élèves" type="ressources" />
+  <la_2e_classe name="la 2e classe" link="https://la2eclasse.com/ecole-en-ligne/" def="Entreprise québécoise fière, spécialisée dans le tutorat individuel et les cours en groupe." type="ressources" />
+  <telequebec_en_classe name="telequebec en classe" link="https://enclasse.telequebec.tv/" def="une foule de contenus pertinents et inspirants.Explorez nos productions exclusives, pensées pour la classe. Allez-y, c’est gratuit!" type="ressources" />
+  <tvo_learn name="tvo learn" link="https://tvolearn.com/" def="learning that aligns with the Ontario curriculum, from Kindergarten to Grade 12." type="ressources" />
+  <Khan_academy name="Khan academy" link="https://fr.khanacademy.org/" def="" type="ressources" />
+  <logiciel_educatif name="logiciel educatif" link="https://www.logicieleducatif.fr/" def="Des jeux... au service de la pédagogie !" type="ressources" />
+  <la_souris_web name="la souris web" link="https://www.lasouris-web.org/" def="exercices en ligne et des jeux éducatifs gratuits pour les élèves du préscolaire, du primaire et du secondaire." type="ressources" />
+  <biblius name="biblius" link="https://projetbiblius.ca/" def="une plateforme d’emprunt de livres en ligne" type="ressources" />
+  <khan_academy name="khan academy" link="https://fr.khanacademy.org/" def="Cours gratuits, principalement en mathématiques et sciences." type="ressources" />
+  <CNED name="CNED" link="cned.fr" def="curriculum de France" type="ressources" />
+  <Orthop_dago name="Orthopédago" link="https://communauteweb.cssdm.gouv.qc.ca/cultureinfo/" def="jeux éducatifs et d’applications à télécharger" type="ressources" />
+  <culture_info name="culture info" link="https://communauteweb.cssdm.gouv.qc.ca/cultureinfo/" def="Prends le contrôle de ton savoir numérique" type="ressources" />
+  <Maxetom name="Maxetom" link="https://www.maxetom.com/nos-jeux-educatifs/jouer-avec-les-maths/" def="les mathématiques et la lecture à travers une collection de jeux éducatifs ludiques" type="ressources" />
+  <Netmath name="Netmath" link="https://app.scolab.com/SignIn?lang=fr" def="plateforme d’apprentissage de mathématique offre des milliers d’activités interactives et motivantes destinées aux élèves du primaire et du secondaire." type="ressources" />
+  <I__Interactif name="I+ Interactif" link="https://www.iplusinteractif.com/" def="une initiative de Chenelière Éducation, se positionne comme une ressource essentielle au service de l’enseignement et des apprentissages" type="ressources" />
+  <ExoFiches name="ExoFiches" link="https://www.exofiches.net/" def="une abondance de PDF téléchargeables et imprimables classés selon l’âge de l’enfant" type="ressources" />
+  <CCDMD name="CCDMD" link="https://www.ccdmd.qc.ca/fr/#" def="renforcement pour son français écrit" type="ressources" />
+  <Na_tre_et_grandir name="Naître et grandir" link="https://naitreetgrandir.com/fr/etape/5-8-ans/fiches-activites/jeux/" def="des jeux et exercices PDF à télécharger en fonction de l’âge, offrant des activités ludiques pour stimuler l’apprentissage à la maison." type="ressources" />
+  <Prof_et_cie name="Prof et cie" link="https://profetcie.com/" def="le site québécois Prof et Cie propose une panoplie de matériel pédagogique conçu principalement pour les enseignants, mais qui peut aussi être très utile à la maison" type="ressources" />
+  <Colle_a_moi name="Colle a moi" link="https://colleamoi.com/blogue/" def="blog sur l'éducation des enfants!" type="ressources" />
+  <La_Magie_des_Maths name="La Magie des Maths" link="https://lamagiedesmaths.ulaval.ca/" def="nous rendons les mathématiques amusantes et accessibles à tous. Soutenue par l’Association Québécoise des Jeux Mathématiques (AQJM) et le projet Sciences et Mathématiques en Action (SMAC), notre mission est de captiver les jeunes grâce à des ateliers interactifs, des énigmes et des défis ludiques" type="ressources" />
+  <bibliomontreal.com name="bibliomontreal.com" link="https://nelligandecouverte.ville.montreal.qc.ca/" def="reseau des bibliotheques de montreal" type="ressources" />
+  <matieres_a_emporter name="matieres a emporter" link="https://www.matieresaemporter.ca/" def="contenus primaire secondaire" type="ressources" />
+  <Les_D_brouillards name="Les Débrouillards" link="https://lesdebrouillards.com/" def="animations scientifiques" type="ressources" />
+  <quatremille name="quatremille" link="https://www.quatremille.be/" def="10 MUSÉES EN LIGNE À VISITER DEPUIS CHEZ VOUS GRATUITEMENT" type="ressources" />
+  <_1_jour_1_actu name="1 jour 1 actu" link="https://www.1jour1actu.com/" def="actualite a la hauteur des enfants" type="ressources" />
+  <OHdio name="OHdio" link="https://ici.radio-canada.ca/ohdio/categories/1003063/livres-audio" def="livres audio" type="ressources" />
+  <sophie_lit name="sophie lit" link="https://sophielit.ca/" def="readers digest pour enfant et ados" type="ressources" />
+  <prodigy_game name="prodigy game" link="https://www.prodigygame.com/main-en/blog/homeschooling-resources?utm_source=chatgpt.com" def="" type="ressources" />
+</data>
+

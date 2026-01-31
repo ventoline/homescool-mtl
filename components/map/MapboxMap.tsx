@@ -28,5 +28,5 @@ export default function MapboxMap({ centres }: { centres: Centre[] }) {
     return () => map.remove()
   }, [centres])
 
-  return <div ref={mapRef} className="h-[500px] w-full rounded-xl shadow-md" />
+  return <div ref={mapRef} className="max-h-500px h-full w-full rounded-xl shadow-md" />
 }

@@ -35,7 +35,7 @@ function trackCenterSelect(center: { id: string; nameId: string }) {
     if (!map || c.lng == null || c.lat == null) return;
     map.flyTo({
       center: [c.lng, c.lat],
-      zoom: Math.max(map.getZoom(), 8),
+      zoom: Math.max(map.getZoom(), 2),
       speed: 1.2,
       curve: 1.42,
       essential: true,
@@ -52,7 +52,7 @@ function trackCenterSelect(center: { id: string; nameId: string }) {
 
 
   return (
-    <article className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+    <article className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300 break-inside-avoid-column">
    <div   key={centre.id}
           onMouseEnter={() => flyToCenter(centre)}
         //  onMouseLeave={clearHoverState}

@@ -1,5 +1,5 @@
 
-import { getCentres, parseGeoJSONToItems } from "@/lib/parseCentres"
+//import { getCentres, parseGeoJSONToItems } from "@/lib/parseCentres"
 import Hero from "@/components/listicle/Hero"
 import CentreList from "@/components/listicle/CentreList"
 import MapList from "@/components/MapList"
@@ -8,7 +8,9 @@ import MapboxMap from "@/components/map/MapboxMap"
 //import PageAnalytics from "@/components/AnalyticsPage"
 import AdUnit from "@/components/AdBlock";
 import Image from "next/image";
+import { useData } from "@/components/DataProvider"
 
+"use-client"
 
 declare global {
   interface Window {
@@ -17,13 +19,14 @@ declare global {
 }
 
 export default function Page() {
-  const centres = parseGeoJSONToItems()//GEOJson 
+ // const centres = //context.centers parseGeoJSONToItems()//GEOJson \
+  
   // getCentres()//XML
   return (
     <main className="max-w-7xl mx-auto px-4  mt-0">
 
 
-      <Hero title= 'Cantres de Homeschooling' />
+      <Hero title= 'Centres de Homeschooling' />
     <section  className="grid">
       <div className="grid gap-4 md:grid-cols-[2fr_1fr] p-3">
 <div>  <p> <span className="text-gray-500">
@@ -33,11 +36,11 @@ export default function Page() {
 </span> </p> 
 <br/>
 
-<p>
+<p></p>
 
 
 <h2> Ici les 6 principaux centres avec les infos pour diriger et rejoindre les coopératives de familles partageant les valeurs proches.
-  </h2></p>
+  </h2>
   </div>
  <div  className="bg-black"> <Image   className="h-50 w-full object-cover"
 
@@ -65,7 +68,7 @@ export default function Page() {
       </div>
 
       <section  className="grid"/*  className="grid lg:grid-cols-2 gap-10" */>
-   <MapList centres={centres}/> 
+   <MapList  filter={'centre'}/>
   </section>
 
 

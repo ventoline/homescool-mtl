@@ -3,6 +3,7 @@ import type { ReactNode } from "react"
 import { Inter, Roboto,Leckerli_One, Pacifico, Sour_Gummy, Borel, Bonheur_Royale  } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
+import {DataProvider} from "@/components/DataProvider"
 
 
 
@@ -48,7 +49,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
       <body className="bg-[#FFF8EE] text-gray-800 font-sans">
        
-        {children}
+     <DataProvider > {children}
+      </DataProvider>  
          <GoogleAnalytics gaId="G-3TPJ06NTX1" />    {/*GTM-MJQ8TTRH" />   "G-3TPJ06NTX1" /> */}
           <Script
           id="adsense-script"

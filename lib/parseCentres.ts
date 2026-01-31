@@ -1,11 +1,20 @@
-import fso from "fs";
-import { promises as fs } from 'fs';
-import process from 'process'; // May need to import process
 
 import path from "path"
 import { XMLParser } from "fast-xml-parser";
 
-//import data from "@/data/xml/Homeschool centers in Montreal.geojson"
+//import data from "public/data/Homeschool centers in Montreal.geojson";
+import dataLinx from "public/data/ressources links.xml"
+
+const DATA_DIR = path.join(process.cwd(), "data"); // private folder (NOT public)
+const GEOJSON_PATH = path.join(DATA_DIR,  "Homeschool centers in Montreal.geojson");
+/* 
+    (async () => {
+      const [xmlText, geojson] = await Promise.all([
+        fetch("/data/centres.xml").then((r) => r.text()),
+        fetch("/data/centres.geojson").then((r) => r.json()),
+      ]);
+
+    }) */
 
 
 export type Centre = {
@@ -13,29 +22,38 @@ export type Centre = {
   name: string
   description: string
   address: string
-  lat: number
-  lng: number
+  lat?: number
+  lng?: number
   website: string
   type: string
  // affiliate: boolean
 }
 
-export function getCentres(): Centre[] {
-  const filePath = path.join(process.cwd(), "data/xml/Homeschool centers in Montreal.geojson") //"data/xml/centres-montreal.xml")
-  const xmlData = fso.readFileSync(filePath, "utf-8")
-  const parser = new XMLParser({ trimValues: true })
-  const parsed = parser.parse(xmlData)
-  console.log(parsed)
+export function getCentres(parsed): {}[] {
 
-   return parsed.centres.centre.map((c: any) => ({
+   if (!parsed  || !parsed?.data ) return [];
+const itemsArray = Object.entries(parsed?.data).map((child, idx) => {
+console.log(child)
+     return   {
+id:idx,
+       name: child[1]['name'],
+        website:  child[1]['link'],
+        description:  child[1]['def'],
+        type:  child[1]['type']
+    }; 
+});
+    console.log(itemsArray)
+    return itemsArray;
+/*    return Array.from(parsed['data'].map((c: any) => ({
     name: c.name,
-    description: c.description,
-    address: c.address,
+    description: c.def || '',
+  //  address: c.address,
   //  lat: Number(c.latitude),
     //lng: Number(c.longitude),
-    website: c.link,
-    affiliate: c.affiliate === "true",
-  })) 
+    website: c.link || '',
+    type: c.type || ''
+  //  affiliate: c.affiliate === "true",
+  })) ) */
 }
 
 
@@ -44,19 +62,36 @@ export function getCentres(): Centre[] {
  * - Supports Point, Polygon, MultiPolygon (computes a representative center)
  * - Assumes coordinates are [lng, lat]
  */
-export  function parseGeoJSONToItems(): []{
-  const filePath = path.join(process.cwd(), "data/xml/Homeschool centers in Montreal.geojson") //"data/xml/centres-montreal.xml")
-  const xmlData =  fso.readFileSync(filePath, "utf-8")
-//const geojson = await fetch("/Homeschool centers in Montreal.geojson").then(r => r.json());
-  const geojson = JSON.parse(xmlData);
+export  function parseGeoJSONToItems(geojson:any): Centre[]{
+    if (!geojson || geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) return [];
 
+console.log('parseGeoJSONToItems')
+ //try {
+   // const geojson = await fetch("@/data/Homeschool centers in Montreal.geojson").then((r) => r.json()); // Wait for the network request to complete
+ //}
+
+    
+   // const data = await response.json(); 
+   // const  geojson = await  Promise.all( fetch("@/data/Homeschool centers in Montreal.geojson").then((r) => r.json())
+       //   //fetch("/data/centres.xml").then((r) => r.text()),
+ // )
+
+console.log(geojson)
+  //const filePath = path.join(process.cwd(), "data/Homeschool centers in Montreal.geojson") //"data/xml/centres-montreal.xml")
+  //const xmlData = await fs.readFile(filePath, "utf-8")
+  //const xmlData = await fs.readFile(data, "utf-8")
+//const geojson = await fetch("/Homeschool centers in Montreal.geojson").then(r => r.json());
+//console.log(xmlData)
+ //const geojson = JSON.parse(data);
+//console.log(data);
+console.log(geojson.features);
 
   if (!geojson || geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) {
     return [];
   }
-
+ 
   return geojson.features
-    .filter(f => f && f.type === "Feature" /* && f.geometry */) //TODO filter non centers
+    .filter(f => f && f.type === "Feature" /* && f.geometry */) 
     .map((f, idx) => {
       const props = f.properties || {};
       const { lng, lat } = getFeatureCenter(f.geometry);

@@ -32,11 +32,11 @@ export default function Page() {
 </span> </p> 
 <br/>
 
-<p>
+<p></p>
 
 
 <h2> Ici les 6 principaux centres avec les infos pour diriger et rejoindre les coopératives de familles partageant les valeurs proches.
-  </h2></p>
+  </h2>
   </div>
  <div  className="bg-black"> <Image   className="h-50 w-full object-cover"
 
