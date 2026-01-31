@@ -1,10 +1,19 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://instruction-domicile-montreal.ca",
-      lastModified: new Date(),
-    },
-  ]
+  const baseUrl = "https://www.homescool.ca";
+
+  const routes = [
+    "",
+    "/ressources",
+    "/communaute",
+    "/activites",
+  ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: route === "" ? 1 : 0.7,
+  }));
 }
