@@ -1,4 +1,11 @@
-// app/ressources/layout.tsx
+
+export const metadata = {
+  title: "Aide et communaute Homeschooling - école a la maison - Montréal",
+  description:
+    "Liste de ressources et d'entraide pour les familles pratiquant l'école a la maison à Montréal.",
+}
+
+
 export default function RessourcesLayout({
   children,
 }: {

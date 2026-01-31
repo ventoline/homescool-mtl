@@ -38,6 +38,9 @@ export const metadata = {
     "Liste complète et mise à jour des centres d’instruction à domicile à Montréal.",
 }
 
+
+
+
 export default function RootLayout({ children }: { children: ReactNode }) {
 
 

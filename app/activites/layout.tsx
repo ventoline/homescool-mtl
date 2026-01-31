@@ -1,4 +1,10 @@
-// app/ressources/layout.tsx
+
+export const metadata = {
+  title: "Activites pour Homeschooling - école a la maison - Montréal",
+  description:
+    "Liste de services pour homscoolers à domicile à Montréal.",
+}
+
 export default function RessourcesLayout({
   children,
 }: {

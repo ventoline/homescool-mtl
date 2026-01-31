@@ -28,8 +28,12 @@ export default function Page() {
     <section  className="grid">
       <div className="grid gap-4 md:grid-cols-[2fr_1fr] p-3">
 <div>  <p> <span className="text-gray-500">
-   Pratiquer l’école à la maison peut être exigeant, il existe des centres à Montréal de structure et philosophie variées. 
-    Trouver ces centres dans le paysage constamment en mouvement n'est pas toujours mince affaire. 
+  Pratiquer l’école à la maison peut être exigeant pour une famille. Heureusement il existe des centres à Montréal de structure et de philosophie variées offrant de nombreuses bonnes raisons de rejoindre un groupe d'entraide.
+Vous souhaitez peut-être passer du temps avec des familles</span> </p><p> <span className="text-gray-500">
+partageant une philosophie éducative similaire, vous faire des amis pour vous et vos enfants, enrichir les opportunités éducatives de votre enfant
+ou tout simplement partager des moments conviviaux avec d'autres familles pratiquant l'instruction à domicile. Quelle que soit votre motivation,
+rejoindre un groupe d'entraide présente de nombreux avantages, tant pour les parents que pour les enfants a toutes les étapes de leur éducation.
+
     
 </span> </p> 
 <br/>
@@ -37,8 +41,12 @@ export default function Page() {
 <p></p>
 
 
-<h2> Ici les 6 principaux centres avec les infos pour diriger et rejoindre les coopératives de familles partageant les valeurs proches.
-  </h2>
+<p><span className="text-gray-500"> Trouver le bon centre dans le paysage Montréalais constamment en mouvement n'est pas toujours mince affaire.  
+  </span> </p><p><span className="text-gray-500">
+  Le centre ou CO-OP ont une service, une structures,  et philosophie propre à chacune.</span> 
+  </p>
+  <h2>Retrouve ici les principaux centres avec les infos pour vous diriger et rejoindre les coopératives de familles partageant les valeurs proches.
+ </h2> 
   </div>
  <div  className="bg-black"> <Image   className="h-50 w-full object-cover"
 

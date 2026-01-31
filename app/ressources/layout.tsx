@@ -1,5 +1,12 @@
-// app/ressources/layout.tsx
-export default function RessourcesLayout({
+
+export const metadata = {
+  title: "Ressources pour Homeschooling - école a la maison - Montréal",
+  description:
+    "Liste de liens utiles de  l'école a la maison Quebec.",
+}
+
+ 
+ export default function RessourcesLayout({
   children,
 }: {
   children: React.ReactNode;

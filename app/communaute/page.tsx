@@ -33,9 +33,8 @@ réseauter.
 <br/>
 
 <p>Comme point de départ,il est avise de se rapprocher de son école de quartier (<Link href='https://www.cssdm.gouv.qc.ca/trouver-une-ecole'>en francais</Link> ou <Link href="https://apps.emsb.qc.ca/SchoolFinder/en-CA">anglophone</Link>) pour des directives. </p>
-<p>
-   
-  </p>
+<p> </p>
+
   <h2>Ici les Incontournables pour naviguer l'école a la maison a Montréal.
   </h2>
   </div>
