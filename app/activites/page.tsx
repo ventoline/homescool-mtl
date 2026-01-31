@@ -8,6 +8,7 @@ import MapboxMap from "@/components/map/MapboxMap"
 import AdUnit from "@/components/AdBlock";
 import Image from "next/image";
 import { defaultConfig } from "next/dist/server/config-shared"
+import Link from "next/link"
 
 
 declare global {
@@ -79,16 +80,16 @@ export default async function RessourcesPage() {
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
         <ul className="space-y-2">
           <li>
-            <a href="/" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
-Centres de l'école a la maison - Homeschooling a Montreal      </a>
+            <Link href="/" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Centres de l'école a la maison - Homeschooling a Montreal      </Link>
           </li>  <li>
-            <a href="/ressources" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
-Soutient - Communaute pour l'école a la maison - Homeschooling         </a>
+            <Link href="/ressources" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Soutient - Communaute pour l'école a la maison - Homeschooling         </Link>
           </li>
           <li>
-            <a href="/communaute" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
+            <Link href="/communaute" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
              Soutient - Communautes Homeschooling   
-            </a>
+            </Link>
           </li>
         </ul>
       </section>
@@ -96,7 +97,7 @@ Soutient - Communaute pour l'école a la maison - Homeschooling         </a>
         <section className="my-2 text-center w-1/2 float-right mt-20">
 
            <div className="border border-gray-200 p-4 rounded-md bg-white shadow-sm">
-          <span  className=" contact-box text-gray-300">Une question? Ajouter votre centre ici? reporter un glitch? <br/><u><a href='mailto:leclubelectro@gmail.com'>Contactez-nous</a></u></span>
+          <span  className=" contact-box text-gray-300">Une question? Ajouter votre centre ici? reporter un glitch? <br/><u><Link href='mailto:leclubelectro@gmail.com'>Contactez-nous</Link></u></span>
         </div>
         </section>
     </main>

@@ -30,7 +30,7 @@ export default function RessourcesPage() {
   Appliquer une pédagogie alternative peut s'avérer complexe à gérer et il est confortant de trouver les outils et programmes,
    alternatives éducatives. </p>
    <p>
-  Ainsi qu de s'appuyer sur <a href='/communaute'>la communauté</a> pour échanger sur les pédagogies ou réseauter et partager 
+  Ainsi qu de s'appuyer sur <Link href='/communaute'>la communauté</Link> pour échanger sur les pédagogies ou réseauter et partager 
    avec des familles qui partagent notre aventure. 
  </p> 
 <br/>
@@ -84,16 +84,16 @@ export default function RessourcesPage() {
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
         <ul className="space-y-2">
           <li>
-            <a href="/" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
-Centres de l'école a la maison - Homeschooling a Montreal      </a>
+            <Link href="/" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Centres de l'école a la maison - Homeschooling a Montreal      </Link>
           </li>  <li>
-            <a href="/communaute" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
-Soutient - Communautes Homeschooling         </a>
+            <Link href="/communaute" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Soutient - Communautes Homeschooling         </Link>
           </li>
           <li>
-            <a href="/activites" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
+            <Link href="/activites" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
               Activités pour homeschoolers - Montréal
-            </a>
+            </Link>
           </li>
         </ul>
       </section>

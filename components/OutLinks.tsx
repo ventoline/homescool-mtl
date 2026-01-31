@@ -10,18 +10,18 @@ export default function OutLinks(){
     <div>
                 <ul className="space-y-2">
           <li>
-            <Link href="/ressources">
+            <Link href="/ressources" className="text-blue-600 underline" >
 Ressources pour l'école a la maison - Homeschooling     
 </Link>
       
           </li>  <li>
-            <a href="/communaute" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
-Outils - Communaute pour l'école a la maison - Homeschooling         </a>
+            <Link href="/communaute" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Outils - Communaute pour l'école a la maison - Homeschooling         </Link>
           </li>
           <li>
-            <a href="/activites" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
+            <Link href="/activites" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
               Activités pour homeschoolers - Montréal
-            </a>
+            </Link>
           </li>
         </ul>
         

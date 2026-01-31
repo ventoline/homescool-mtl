@@ -9,9 +9,7 @@ import CentreCard from "./listicle/CentreCard";
 export default function CardList({  type }: {type: string }) {
   const [items, setItems] = useState<Centre[]>([]);
         const { centres, ressources,  loading, error} = useData();
-console.log('reflist', ressources, type);
       const filtered = ressources.filter((c) => c.type === type);
-console.log('filtered', filtered)
 
   useEffect(() => {
       setItems(filtered);

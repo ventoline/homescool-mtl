@@ -18,10 +18,6 @@ declare global {
 
 export default function RessourcesPage() {
 
-
- //// const centres = parseGeoJSONToItems()//GEOJson 
- // console.log('parsed centres', centres)
-  // getCentres()//XML
   return (
     <main className="max-w-7xl mx-auto px-4  mt-0">
 
@@ -82,8 +78,8 @@ réseauter.
         <h2 className="text-2xl font-bold mb-4">Voir aussi</h2>
         <ul className="space-y-2">
           <li>
-            <a href="/" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
-Centres de l'école a la maison - Homeschooling a Montreal      </a>
+            <Link href="/" className="text-blue-600 underline"  /*onClick={()=> window.gtag?.("event", "goto_resources")} */>
+Centres de l'école a la maison - Homeschooling a Montreal      </Link>
           </li>  
           <li>
  <Link href="/ressources">
@@ -91,9 +87,9 @@ Ressources pour l'école a la maison
 </Link>
           </li>
           <li>
-            <a href="/activites" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
+            <Link href="/activites" className="text-blue-600 underline" /* onClick={()=> window.gtag?.("event", "goto_activities")} */>
               Activités pour homeschoolers - Montréal
-            </a>
+            </Link>
           </li>
         </ul>
       </section>

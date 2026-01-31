@@ -7,53 +7,36 @@ import dataLinx from "public/data/ressources links.xml"
 
 const DATA_DIR = path.join(process.cwd(), "data"); // private folder (NOT public)
 const GEOJSON_PATH = path.join(DATA_DIR,  "Homeschool centers in Montreal.geojson");
-/* 
-    (async () => {
-      const [xmlText, geojson] = await Promise.all([
-        fetch("/data/centres.xml").then((r) => r.text()),
-        fetch("/data/centres.geojson").then((r) => r.json()),
-      ]);
-
-    }) */
 
 
 export type Centre = {
- id: string
+  id: string
   name: string
   description: string
-  address: string
+  address?: string
   lat?: number
   lng?: number
   website: string
-  type: string
+  type?: string
  // affiliate: boolean
 }
 
-export function getCentres(parsed): {}[] {
+
+
+export function getCentres(parsed): Centre[] {
 
    if (!parsed  || !parsed?.data ) return [];
-const itemsArray = Object.entries(parsed?.data).map((child, idx) => {
-console.log(child)
-     return   {
-id:idx,
+const itemsArray = Object.entries(parsed?.data).map((child :unknown, idx) => {
+  return   {
+       id:idx.toString(),
        name: child[1]['name'],
-        website:  child[1]['link'],
-        description:  child[1]['def'],
-        type:  child[1]['type']
-    }; 
+       website:  child[1]['link'],
+       description:  child[1]['def'],
+       type:  child[1]['type']
+    } as Centre; 
 });
-    console.log(itemsArray)
     return itemsArray;
-/*    return Array.from(parsed['data'].map((c: any) => ({
-    name: c.name,
-    description: c.def || '',
-  //  address: c.address,
-  //  lat: Number(c.latitude),
-    //lng: Number(c.longitude),
-    website: c.link || '',
-    type: c.type || ''
-  //  affiliate: c.affiliate === "true",
-  })) ) */
+
 }
 
 
@@ -64,27 +47,6 @@ id:idx,
  */
 export  function parseGeoJSONToItems(geojson:any): Centre[]{
     if (!geojson || geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) return [];
-
-console.log('parseGeoJSONToItems')
- //try {
-   // const geojson = await fetch("@/data/Homeschool centers in Montreal.geojson").then((r) => r.json()); // Wait for the network request to complete
- //}
-
-    
-   // const data = await response.json(); 
-   // const  geojson = await  Promise.all( fetch("@/data/Homeschool centers in Montreal.geojson").then((r) => r.json())
-       //   //fetch("/data/centres.xml").then((r) => r.text()),
- // )
-
-console.log(geojson)
-  //const filePath = path.join(process.cwd(), "data/Homeschool centers in Montreal.geojson") //"data/xml/centres-montreal.xml")
-  //const xmlData = await fs.readFile(filePath, "utf-8")
-  //const xmlData = await fs.readFile(data, "utf-8")
-//const geojson = await fetch("/Homeschool centers in Montreal.geojson").then(r => r.json());
-//console.log(xmlData)
- //const geojson = JSON.parse(data);
-//console.log(data);
-console.log(geojson.features);
 
   if (!geojson || geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) {
     return [];

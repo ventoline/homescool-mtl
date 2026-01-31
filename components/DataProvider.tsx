@@ -31,41 +31,25 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         const parser = new XMLParser({ trimValues: true })
         const [xmlText, geojson] = await Promise.all([
           fetch("/data/ressources links.xml").then((r) => r.text())
-          //.then((rt) =>{ 
-           //const xml = new XMLParser({trimValues: true,  ignoreAttributes: false,  attributeNamePrefix: '',}).parse(rt); 
- // console.log(xml);})
   ,
           fetch("/data/Homeschool centers in Montreal.geojson").then((r) => r.json()),
         ]);
 
-   /*      const merged = [
-          ...parseGeoJSONToItems(geojson),
-          ...getCentres(xmlText),
-        ];
- */
- console.log('loaded data', xmlText, geojson)
         const centers  =  parseGeoJSONToItems(geojson);
 const xml = new XMLParser({trimValues: true,  ignoreAttributes: false,  attributeNamePrefix: '',}).parse(xmlText); 
         const res  =  getCentres(xml);
 
-       
-        console.log('then parsed res', xml, res)
- //setCentres( centers );
-   // setRessources(res)
 
-        if (!cancelled)  { setCentres( centers );    setRessources(res)  
-            console.log('canc', cancelled) ;
-        console.log('then parsed centers', centers)
-        console.log(' res', res, ressources)
+        if (!cancelled)  { 
+          setCentres( centers );    
+          setRessources(res)  
+
    }
 
-
-         
-   
    
   } catch (e: any) { console.log('caught', e)
         if (!cancelled) setError(e?.message ?? "Failed to load centres");
-      } finally {console.log('finally')
+      } finally {console.log('_')
         if (!cancelled) setLoading(false);
       }
     })();
@@ -76,8 +60,6 @@ const xml = new XMLParser({trimValues: true,  ignoreAttributes: false,  attribut
   }, []);
 
   const value = useMemo<CentresCtx>(() => {
-
-    console.log('use memo dataprovider', centres, ressources)
     return {
       centres, ressources,
       loading,

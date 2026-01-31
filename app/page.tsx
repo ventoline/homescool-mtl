@@ -1,5 +1,4 @@
 
-//import { getCentres, parseGeoJSONToItems } from "@/lib/parseCentres"
 import Hero from "@/components/listicle/Hero"
 import CentreList from "@/components/listicle/CentreList"
 import MapList from "@/components/MapList"
@@ -9,6 +8,7 @@ import MapboxMap from "@/components/map/MapboxMap"
 import AdUnit from "@/components/AdBlock";
 import Image from "next/image";
 import { useData } from "@/components/DataProvider"
+import Link from "next/link";
 
 "use-client"
 
@@ -19,9 +19,7 @@ declare global {
 }
 
 export default function Page() {
- // const centres = //context.centers parseGeoJSONToItems()//GEOJson \
   
-  // getCentres()//XML
   return (
     <main className="max-w-7xl mx-auto px-4  mt-0">
 
@@ -90,7 +88,7 @@ export default function Page() {
         <section className="my-2 text-center w-1/2 float-right mt-20">
 
            <div className="border border-gray-200 p-4 rounded-md bg-white shadow-sm">
-          <span  className=" contact-box text-gray-300">Une question? Ajouter votre centre ici? reporter un glitch? <br/><u><a href='mailto:leclubelectro@gmail.com'>Contactez-nous</a></u></span>
+          <span  className=" contact-box text-gray-300">Une question? Ajouter votre centre ici? reporter un glitch? <br/><u><Link href='mailto:leclubelectro@gmail.com'>Contactez-nous</Link></u></span>
         </div>
         </section>
     </main>
