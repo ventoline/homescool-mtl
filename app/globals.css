@@ -1,5 +1,3 @@
-
-
 @import "tailwindcss";
 /* @tailwind base;
 @tailwind components;
@@ -15,26 +13,26 @@ html {
   scroll-behavior: smooth;
 }
 
-body{  overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
-h1{
+h1 {
   font-family: leckerli, serif;
 }
 
 /* Body defaults */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #FFF8EE; /* subtle pastel background */
+  font-family: "Inter", sans-serif;
+  background-color: #fff8ee; /* subtle pastel background */
   color: #1f2937; /* dark gray text */
 }
 
 /* Links */
-a {font-family: var(--font-leckerli), cursive;
+a {
+  font-family: var(--font-leckerli), cursive;
   transition: color 0.2;
-    color: #56b1db; /* subtle playful blue hover */
-
-  
+  color: #56b1db; /* subtle playful blue hover */
 }
 
 a:hover {
@@ -42,46 +40,101 @@ a:hover {
 }
 
 /* Headings */
- h4 {
-  font-family: 'Poppins', sans-serif;
+h4 {
+  font-family: "Poppins", sans-serif;
 }
 h2 {
   font-size: larger;
   font-weight: bolder;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-h3{
+h3 {
   font-family: var(--font-leckerli), cursive;
 }
 
-h1{font-family: var(--font-leckerli), cursive;
-   text-shadow: 
+h1 {
+  font-family: var(--font-leckerli), cursive;
+  text-shadow:
     2px 2px 3px rgba(255, 255, 255, 0.15),
-    -2px -2px 3px rgba(0, 0, 0, 0.35);  /* */  /* Highlight effect */ /* Shadow effect */ 
-  
+    -2px -2px 3px rgba(0, 0, 0, 0.35); /* */ /* Highlight effect */ /* Shadow effect */
 
   /* 4. Clip the background to the text shape */
   -webkit-background-clip: text; /* Required for Chrome, Safari */
-  background-clip: text; }
-
-   .hero{
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-   }   
-
-   .card-name{    cursor: crosshair; user-select: none;
+  background-clip: text;
 }
 
-.mapboxgl-ctrl-attrib-inner a{  margin-top:-20px;font-family: 'Poppins', sans-serif !important;
-
+.hero {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.mapboxgl-ctrl-attrib-inner{margin-top: -20px;}
+.card-name {
+  cursor: crosshair;
+  user-select: none;
+}
 
-.contact-box  a{color: var(--color-gray-200); font-family: 'Poppins', sans-serif !important;
+.mapboxgl-ctrl-attrib-inner a {
+  margin-top: -20px;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.mapboxgl-ctrl-attrib-inner {
+  margin-top: -20px;
+}
+
+.contact-box a {
+  color: var(--color-gray-200);
+  font-family: "Poppins", sans-serif !important;
   transition: color 0.2;
-;}
+}
 
-.contact-box  a:hover{color: var(--color-gray-500); font-family: 'Poppins', sans-serif !important;
-  transition: color 0.2;}
+.contact-box a:hover {
+  color: var(--color-gray-500);
+  font-family: "Poppins", sans-serif !important;
+  transition: color 0.2;
+}
 
+.note {
+  position: relative;
+  width: 100%;
+  padding: 1em 1.5em;
+  margin: 1em auto;
+  color: #fff;
+  background: #fde19c; /*  #e38706 #ecba74// #97c02f; #fff8ee*/
+  overflow: hidden;
+}
+
+.note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #fff #fff #ffcc00 #ffcc00;
+  background: grey; /*  #658e15; */
+  -webkit-box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.3),
+    -1px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.3),
+    -1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.3),
+    -1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* Firefox 3.0 damage limitation */
+  display: block;
+  width: 0;
+}
+
+.note.rounded {
+  -moz-border-radius: 5px 0 5px 5px;
+  border-radius: 5px 0 5px 5px;
+}
+
+.note.rounded:before {
+  border-width: 8px;
+  border-color: #fff #fff transparent transparent;
+  -moz-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+}

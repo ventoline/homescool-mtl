@@ -1,16 +1,27 @@
 // components/CentresDataProvider.tsx
 "use client";
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from "react";import { XMLParser } from "fast-xml-parser";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import { XMLParser } from "fast-xml-parser";
 
-import { Centre, /* parseCentresXml, */ getCentres, parseGeoJSONToItems } from "@/lib/parseCentres";
+import {
+  Centre,
+  /* parseCentresXml, */ getCentres,
+  parseGeoJSONToItems,
+} from "@/lib/parseCentres";
 
 type CentresCtx = {
   centres: Centre[];
   ressources: Centre[];
   loading: boolean;
   error: string | null;
- // byType: (type: string) => Centre[];
+  // byType: (type: string) => Centre[];
 };
 
 const Ctx = createContext<CentresCtx | null>(null);
@@ -28,28 +39,31 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
       try {
         setLoading(true);
         setError(null);
-        const parser = new XMLParser({ trimValues: true })
+        const parser = new XMLParser({ trimValues: true });
         const [xmlText, geojson] = await Promise.all([
-          fetch("/data/ressources links.xml").then((r) => r.text())
-  ,
-          fetch("/data/Homeschool centers in Montreal.geojson").then((r) => r.json()),
+          fetch("/data/ressources links.xml").then((r) => r.text()),
+          fetch("/data/Homeschool centers in Montreal.geojson").then((r) =>
+            r.json(),
+          ),
         ]);
 
-        const centers  =  parseGeoJSONToItems(geojson);
-const xml = new XMLParser({trimValues: true,  ignoreAttributes: false,  attributeNamePrefix: '',}).parse(xmlText); 
-        const res  =  getCentres(xml);
+        const centers = parseGeoJSONToItems(geojson);
+        const xml = new XMLParser({
+          trimValues: true,
+          ignoreAttributes: false,
+          attributeNamePrefix: "",
+        }).parse(xmlText);
+        const res = getCentres(xml);
 
-
-        if (!cancelled)  { 
-          setCentres( centers );    
-          setRessources(res)  
-
-   }
-
-   
-  } catch (e: any) { console.log('caught', e)
+        if (!cancelled) {
+          setCentres(centers);
+          setRessources(res);
+        }
+      } catch (e: any) {
+        console.log("caught", e);
         if (!cancelled) setError(e?.message ?? "Failed to load centres");
-      } finally {console.log('_')
+      } finally {
+        console.log("");
         if (!cancelled) setLoading(false);
       }
     })();
@@ -61,10 +75,11 @@ const xml = new XMLParser({trimValues: true,  ignoreAttributes: false,  attribut
 
   const value = useMemo<CentresCtx>(() => {
     return {
-      centres, ressources,
+      centres,
+      ressources,
       loading,
       error,
-     // byType: (type: string) => centres.filter((c) => c.type === type),
+      // byType: (type: string) => centres.filter((c) => c.type === type),
     };
   }, [centres, ressources]);
 
@@ -73,6 +88,7 @@ const xml = new XMLParser({trimValues: true,  ignoreAttributes: false,  attribut
 
 export function useData() {
   const v = useContext(Ctx);
-  if (!v) throw new Error("useCentresData must be used inside CentresDataProvider");
+  if (!v)
+    throw new Error("useCentresData must be used inside CentresDataProvider");
   return v;
 }

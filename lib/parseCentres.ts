@@ -1,59 +1,70 @@
-
-import path from "path"
+import path from "path";
 import { XMLParser } from "fast-xml-parser";
 
 //import data from "public/data/Homeschool centers in Montreal.geojson";
-import dataLinx from "public/data/ressources links.xml"
+import dataLinx from "public/data/ressources links.xml";
 
 const DATA_DIR = path.join(process.cwd(), "data"); // private folder (NOT public)
-const GEOJSON_PATH = path.join(DATA_DIR,  "Homeschool centers in Montreal.geojson");
-
+const GEOJSON_PATH = path.join(
+  DATA_DIR,
+  "Homeschool centers in Montreal.geojson",
+);
 
 export type Centre = {
-  id: string
-  name: string
-  description: string
-  address?: string
-  lat?: number
-  lng?: number
-  website: string
-  type?: string
- // affiliate: boolean
-}
-
-
+  id: string;
+  name: string;
+  description: string;
+  address?: string;
+  lat?: number;
+  lng?: number;
+  website: string;
+  type?: string;
+  // affiliate: boolean
+};
 
 export function getCentres(parsed): Centre[] {
+  console.log("getCentres called with parsed data:", parsed.ressources);
+  //  if (!parsed || !parsed?.data || !parsed?.ressources) return [];
 
-   if (!parsed  || !parsed?.data ) return [];
-const itemsArray = Object.entries(parsed?.data).map((child :unknown, idx) => {
-  return   {
-       id:idx.toString(),
-       name: child[1]['name'],
-       website:  child[1]['link'],
-       description:  child[1]['def'],
-       type:  child[1]['type']
-    } as Centre; 
-});
-    return itemsArray;
+  const itemsArray = Object.entries(parsed?.ressources).map(
+    (child: unknown, idx) => {
+      return {
+        id: idx.toString(),
+        name: child[1]["name"],
+        website: child[1]["link"],
+        description: child[1]["def"],
+        type: child[1]["type"],
+      } as Centre;
+    },
+  );
 
+  console.log("Parsed items:", itemsArray);
+  return itemsArray;
 }
-
 
 /**
  * Convert GeoJSON FeatureCollection into list items.
  * - Supports Point, Polygon, MultiPolygon (computes a representative center)
  * - Assumes coordinates are [lng, lat]
  */
-export  function parseGeoJSONToItems(geojson:any): Centre[]{
-    if (!geojson || geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) return [];
+export function parseGeoJSONToItems(geojson: any): Centre[] {
+  if (
+    !geojson ||
+    geojson.type !== "FeatureCollection" ||
+    !Array.isArray(geojson.features)
+  )
+    return [];
 
-  if (!geojson || geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) {
+  if (
+    !geojson ||
+    geojson.type !== "FeatureCollection" ||
+    !Array.isArray(geojson.features)
+  ) {
     return [];
   }
- 
+
   return geojson.features
-    .filter(f => f && f.type === "Feature" /* && f.geometry */) 
+    .filter((f) => f && f.type === "Feature" /* && f.geometry */)
     .map((f, idx) => {
       const props = f.properties || {};
       const { lng, lat } = getFeatureCenter(f.geometry);
@@ -62,7 +73,7 @@ export  function parseGeoJSONToItems(geojson:any): Centre[]{
       const id =
         f.id ??
         props.id ??
-    //    props.slug ??
+        //    props.slug ??
         `${props.name ?? "feature"}-${idx}`;
 
       return {
@@ -70,7 +81,7 @@ export  function parseGeoJSONToItems(geojson:any): Centre[]{
         name: props.name ?? props.title ?? "",
         address: props.address ?? "",
         website: props.link ?? props.url ?? "",
-       // def: props.def ?? "",
+        // def: props.def ?? "",
         category: props.type ?? "",
         description: props.def ?? "",
         lng,
@@ -92,13 +103,18 @@ function getFeatureCenter(geometry) {
 
   if (geometry.type === "Point") {
     const c = geometry.coordinates;
-    return Array.isArray(c) && c.length >= 2 ? { lng: c[0], lat: c[1] } : { lng: null, lat: null };
+    return Array.isArray(c) && c.length >= 2
+      ? { lng: c[0], lat: c[1] }
+      : { lng: null, lat: null };
   }
 
   const coords = flattenCoordinates(geometry);
   if (coords.length === 0) return { lng: null, lat: null };
 
-  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  let minLng = Infinity,
+    minLat = Infinity,
+    maxLng = -Infinity,
+    maxLat = -Infinity;
 
   for (const [lng, lat] of coords) {
     if (typeof lng !== "number" || typeof lat !== "number") continue;
@@ -108,7 +124,12 @@ function getFeatureCenter(geometry) {
     maxLat = Math.max(maxLat, lat);
   }
 
-  if (!isFinite(minLng) || !isFinite(minLat) || !isFinite(maxLng) || !isFinite(maxLat)) {
+  if (
+    !isFinite(minLng) ||
+    !isFinite(minLat) ||
+    !isFinite(maxLng) ||
+    !isFinite(maxLat)
+  ) {
     return { lng: null, lat: null };
   }
 
@@ -141,5 +162,10 @@ function flattenCoordinates(geometry) {
 }
 
 function isLngLat(x) {
-  return Array.isArray(x) && x.length >= 2 && typeof x[0] === "number" && typeof x[1] === "number";
+  return (
+    Array.isArray(x) &&
+    x.length >= 2 &&
+    typeof x[0] === "number" &&
+    typeof x[1] === "number"
+  );
 }

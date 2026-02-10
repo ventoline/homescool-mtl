@@ -6,7 +6,7 @@
         "name": "la 2e classe",
         "link": "https://la2eclasse.com",
         "type": "service",
-        "def": "soutient scolaire",
+        "def": "familles qui choisissent l’école à la maison, nos cours de groupe en ligne offrent un cadre stimulant, structuré et bienveillant.",
         "address": ""
       },
       "geometry": {
@@ -21,7 +21,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "le char bleu",
+        "name": "le chat bleu",
         "address": "",
         "def": "fun exercise classes activity days for older homeschoolers (10+) board games (chess, backgammon, among others) recreational ping-pong",
         "link": "www.centrechatbleu.com",
@@ -40,9 +40,9 @@
       "type": "Feature",
       "properties": {
         "name": "Jardin Urbain",
-        "def": "",
+        "def": "Un continuum d'options éducatives flexibles pour les enfants de 2 à 17 ans",
         "address": "",
-        "link": "https://www.jardinurbin.ca",
+        "link": "https://www.lejardinurbin.ca",
         "type": "centre"
       },
       "geometry": {
@@ -77,7 +77,7 @@
       "properties": {
         "name": "Space Parallel",
         "address": "",
-        "def": "",
+        "def": "Un environnement éducatif libre, flexible et bienveillant, qui respecte le rythme des enfants. 7 ans et plus et qui peuvent présenter un defi d'apprentissage.",
         "link": "https://apprentissages.ca/ecole-a-la-maison",
         "type": "centre"
       },
@@ -97,7 +97,7 @@
         "address": "",
         "link": "http://nookhomeschoolers.com",
         "type": "centre",
-        "def": ""
+        "def": "Un groupe de familles pratiquant l'instruction à domicile dans l'ouest de l'île de Montréal qui se réunissent autour de l'émerveillement, la curiosité et la créativité !"
       },
       "geometry": {
         "coordinates": [
@@ -114,7 +114,7 @@
         "name": "centre pastel",
         "address": "",
         "link": "https://centrepastel.org/",
-        "def": "Pour l’enfant de 6 à 10 ans. Le Centre propose un environnement «comme à la maison» qui offre sécurité et chaleur au jeune enfant de moins de 10 ans.. ",
+        "def": "Pour l’enfant de 6 à 10 ans. Axé sur le développement du potentiel de chaque enfant, le programme propose une multitude d'activités accessibles sur place.",
         "type": "centre"
       },
       "geometry": {
@@ -167,7 +167,7 @@
       "properties": {
         "name": "mont - libre",
         "address": "",
-        "def": "",
+        "def": "Centre éducatif agile situé de 9 à 18 ans.  Un espace sécuritaire, inclusif et antiraciste ouvert à la neurodiversité et aux membres de la communauté LGBTQ+. ouvert aux 6-9 ans les jeudis seulement. ",
         "link": "https://montlibre.org/",
         "type": "centre"
       },
@@ -201,7 +201,7 @@
       "properties": {
         "name": "Fabricatheque sud ouest",
         "address": "",
-        "def": "",
+        "def": "La librarie sud-ouest abrite un fabricatheque qui offrent des plages horaires pour lecole a la maison",
         "link": "https://montreal.ca/lieux/fabricatheque-du-sud-ouest",
         "type": "service"
       },
@@ -219,7 +219,7 @@
       "properties": {
         "name": "Imagily",
         "address": "",
-        "def": "",
+        "def": "Compétences fondamentales les matins et projets pratiques / activités libres l'apres midi, avec des temps intégrés de réflexion, de discussions socratiques et d'échange. Les apprenants gèrent leur temps, se fixent des objectifs et suivent leurs progrès.",
         "link": "https://boundless-studios.org",
         "type": "centre"
       },
@@ -237,8 +237,8 @@
       "properties": {
         "address": "340 Bd Cartier O, Laval, QC H7N 2J6",
         "name": "TAKI",
-        "def": "",
-        "link": "www.takilecentre.cahttps://www.takilecentre.ca/",
+        "def": " Centre éducatif au valeurs musulmanes et culture arabe. Un programme annuel, thématiques mensuelles, apprentissages ludiques et contenus académiques. Possibilité de drop-off.",
+        "link": "www.takilecentre.ca",
         "type": "centre"
       },
       "geometry": {
@@ -253,8 +253,26 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "TAZ",
+        "address": "",
+        "def": "skateboard centre | taz.ca",
+        "link": "https://www.facebook.com/groups/593549958399418/",
+        "type": "service"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.639073,
+          45.562606
+        ],
+        "type": "Point"
+      },
+      "id": "eef9d308a40aea2b0cdc208579a2b277"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Communidee",
-        "def": "Centre Communide",
+        "def": " une coopérative sans but lucratif située à Saint-Henri. Parents et enfants participent a des activites font des sorties et partagent leur quotidien. ",
         "link": "https://www.communidee.ca",
         "address": "",
         "type": "centre"
