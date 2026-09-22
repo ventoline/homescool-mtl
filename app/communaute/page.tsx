@@ -131,7 +131,13 @@ export default function RessourcesPage() {
           <span className=" contact-box text-gray-300">
             Une question? Ajouter votre centre ici? reporter un glitch? <br />
             <u>
-              <a href="mailto:leclubelectro@gmail.com">Contactez-nous</a>
+              <a
+                href="mailto:leclubelectro@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contactez-nous
+              </a>
             </u>
           </span>
         </div>

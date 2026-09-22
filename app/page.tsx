@@ -90,10 +90,12 @@ export default function Page() {
 
       {/* Ads placeholder */}
       <div className="my-2 text-center">
-        <div className="border border-gray-300 p-4 rounded-md bg-white shadow-sm">
-          <AdUnit slot="1453151522143278" />
-          {/*      <span className="text-gray-500"><i>Votre annonce ici</i></span>
-           */}{" "}
+        <div className="border border-gray-300*/} p-4 rounded-md bg-white shadow-sm">
+          {/*    <AdUnit slot="1453151522143278" />*/}
+
+          <span className="text-gray-500">
+            <i>Votre annonce ici</i>
+          </span>
         </div>
       </div>
 
@@ -119,7 +121,13 @@ export default function Page() {
           <span className=" contact-box text-gray-300">
             Une question? Ajouter votre centre ici? reporter un glitch? <br />
             <u>
-              <Link href="mailto:leclubelectro@gmail.com">Contactez-nous</Link>
+              <Link
+                href="mailto:leclubelectro@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contactez-nous
+              </Link>
             </u>
           </span>
         </div>

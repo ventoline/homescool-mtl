@@ -15,9 +15,9 @@ export default function RefList({ type }: { type: string }) {
   }, [type]);
 
   return (
-    <ul className="space-y-1  columns-3 gap-4">
+    <ul className="space-y-1  columns-3 gap-4  items-stretch ">
       {filtered.map((item, i) => (
-        <li key={i} /* className="border-b pb-2" */>
+        <li key={i} className="pt-2">
           <ListItem key={item.id} ref={item} />
         </li>
       ))}

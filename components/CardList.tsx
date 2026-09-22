@@ -15,7 +15,7 @@ export default function CardList({ type }: { type: string }) {
   }, [type]);
 
   return (
-    <ul className="space-y-3  columns-4 gap-2">
+    <ul className="space-y-3  columns-4 gap-2 ">
       {filtered.map((item, i) => (
         <li key={i} /* className="border-b pb-2" */>
           <CentreCard key={item.id} centre={item} />

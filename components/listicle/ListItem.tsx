@@ -25,7 +25,7 @@ export default function ListItem({ ref }: { ref: Centre }) {
 
   return (
     <div className="note">
-      <article className="p-4 break-inside-avoid-column">
+      <article className="pt-4   break-inside-avoid-column">
         {/* border-t border-blue-200 */}
         <div
           key={ref.id}
