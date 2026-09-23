@@ -119,7 +119,13 @@ export default async function RessourcesPage() {
           <span className=" contact-box text-gray-300">
             Une question? Ajouter votre centre ici? reporter un glitch? <br />
             <u>
-              <Link href="mailto:leclubelectro@gmail.com">Contactez-nous</Link>
+              <Link
+                href="mailto:leclubelectro@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contactez-nous
+              </Link>
             </u>
           </span>
         </div>

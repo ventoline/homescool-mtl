@@ -7,15 +7,14 @@
   <prodigy_ name="prodigy" link="https://www.prodigygame.com/main-en/blog/homeschooling-resources?utm_source=chatgpt.com" def="" type="admin" />
   <Boukili_ name="Boukili" link="https://boukili.ca/" def="Partagez l'amour de la lecture en français avec les petits dès 4 ans" type="app" />
   <Ben_le_koala name="Ben le koala" link="https://benlekoala.com/" def="Ben offre des outils pédagogiques gratuits aux parents et professionnels, pour accompagner l’enfant là où il est." type="app" />
-  <Allo_Prof name="Allo Prof" link="https://www.alloprof.qc.ca/" def="services d'accompagnement scolaires toutes matieres confondues avec du soutien live avec des enseignants" type="ressources" />
+  <Allo_Prof name="Allo Prof" link="https://www.alloprof.qc.ca/" def="services d'accompagnement" type="ressources" />
   <Ecole_Ouverte name="Ecole Ouverte" link="https://ecoleouverte.ca/" def="un éventail de ressources à l’ensemble du réseau scolaire québécois;" type="ressources" />
   <Allo_Prof_Parents name="Allo Prof Parents" link="https://www.alloprof.qc.ca/fr/parents" def="ressources-pour-accompagner-votre-enfant" type="ressources" />
   <Allo_francais name="Allo francais" link="https://allofrancais.ca/" def="Une tonne d’outils gratuits pour t’aider à progresser en français" type="ressources" />
   <CBC_Curio name="CBC Curio" link="https://curio.ca/fr" def="votre ressource pour trouver des contenus de CBC/Radio-Canada sélectionnés avec soin pour leur pertinence dans l'enseignement de chaque matièr" type="ressources" />
   <ONF_Edu name="ONF Edu" link="https://www.onf.ca/education/" def="Ressources d’apprentissage pour esprits curieux" type="ressources" />
   <Recitus name="Recitus" link="https://primaire.recitus.qc.ca/" def="Histoire du Quebec pour la primaire" type="ressources" />
-  <CS_for_all name="CS for all" link="https://csforall.org/fr" def="l'enseignement de l'informatique à la portée de tous les élèves" type="ressources" />
-  <D.E.M._ name="D.E.M." link="https://enseignementmaison.education.gouv.qc.ca/" def="direction enseignement a la maison au Quebec" type="admin" />
+  <D.E.M._direction_enseignement_a_la_maison name="D.E.M. direction enseignement a la maison" link="https://csforall.org/fr" def="l'enseignement de l'informatique à la portée de tous les élèves" type="ressources" />
   <la_2e_classe name="la 2e classe" link="https://la2eclasse.com/ecole-en-ligne/" def="Entreprise québécoise fière, spécialisée dans le tutorat individuel et les cours en groupe." type="ressources" />
   <Telequebec_en_classe name="Telequebec en classe" link="https://enclasse.telequebec.tv/" def="une foule de contenus pertinents et inspirants.Explorez nos productions exclusives, pensées pour la classe. Allez-y, c’est gratuit!" type="ressources" />
   <TVO_learn name="TVO learn" link="https://tvolearn.com/" def="learning that aligns with the Ontario curriculum, from Kindergarten to Grade 12." type="ressources" />
@@ -47,10 +46,5 @@
   <AQED name="AQED" link="" def="L’AQED est un organisme éducatif à but non lucratif pour les familles québécoises dans leur choix de scolariser à domicile. Des outils, des conseils et un soutient de défense les droits des parents-éducateurs auprès des instances gouvernementales. Une communauté vivante d’entraide. une souscription est necessaire" type="admin" />
   <_cole___la_maison_-_Qu_bec__Canada_-_Pr_scolaire_et_primaire name="École à la maison - Québec, Canada - Préscolaire et primaire" link="https://www.facebook.com/groups/181078127389620/" def="Ce groupe a comme but premier de permettre aux parents qui font l'école à la maison d'échanger et d'obtenir des idées d'activités" type="social" />
   <Familles__cole_maison_Montr_al_et_environs_-difficult_s_d_apprentissage name="Familles école maison Montréal et environs -difficultés d'apprentissage" link="https://www.facebook.com/groups/ecolealamaisondifficultedapprentissage" def="une communauté spécialisée dans les difficultés d'apprentissage pour soutenir les familles qui ont un enfant ayant des défis d'apprentissage variés et celles qui font l'école à la maison." type="social" />
-  <Defi_Math name="Defi Math" link="defimath.ca" def="Jeux interactifs pour les mathematicques" type="ressources" />
-  <LCSO name="LCSO" link="https://www.lcso.ca/" def="offrant des activités diversifiées et de qualité dans le sud ouest" type="ressources" />
-  <Chess_and_Math name="Chess and Math" link="https://chess-math.org" def="Echecs et mathematiques" type="ressources" />
-  <Marine_Dumond name="Marine Dumond" link="marinedumond.com" def="News letter et evenements" type="social" />
-  <Stephanie_Sewell name="Stephanie Sewell" link="www.stephaniesewell.ca" def="Alternative Education Consultante" type="social" />
 </ressources>
 
