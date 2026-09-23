@@ -36,11 +36,15 @@ export default function MapAndList({
     });
 
     setMap(m);
-    // ✅ force correct sizing once layout is settled
-    requestAnimationFrame(() => m.resize());
-    setTimeout(() => m.resize(), 110);
 
-    return () => m.remove();
+    // resize the canvas whenever the container changes size (e.g. when the list loads)
+    const ro = new ResizeObserver(() => m.resize());
+    ro.observe(containerRef.current);
+
+    return () => {
+      ro.disconnect();
+      m.remove();
+    };
   }, []);
 
   return (
@@ -51,9 +55,7 @@ export default function MapAndList({
         <CentreList centres={centres} filter={filter} />
         <div
           ref={containerRef}
-          style={{
-            height: "100%",
-          }} /*style={{ height: 500 }} className="h-[500px] w-full rounded-xl shadow-md"*/
+          className="h-full min-h-[500px] w-full rounded-xl shadow-md"
         />
       </div>
     </MapProvider>
