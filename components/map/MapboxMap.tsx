@@ -45,6 +45,8 @@ export default function MapboxMap({ centres }: { centres: Centre[] }) {
   return (
     <div
       ref={containerRef}
+      role="region"
+      aria-label="Carte des centres"
       className="max-h-500px h-full w-full rounded-xl shadow-md"
     />
   );

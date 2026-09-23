@@ -128,17 +128,14 @@ export default function RessourcesPage() {
       {/* contact */}
       <section className="my-2 text-center w-1/2 float-right mt-20">
         <div className="border border-gray-200 p-4 rounded-md bg-white shadow-sm">
-          <span className=" contact-box text-gray-300">
+          <span className=" contact-box text-gray-600">
             Une question? Ajouter votre centre ici? reporter un glitch? <br />
-            <u>
-              <a
-                href="mailto:leclubelectro@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contactez-nous
-              </a>
-            </u>
+            <a
+              href="mailto:leclubelectro@gmail.com"
+              aria-label="Contactez-nous par courriel (leclubelectro@gmail.com)"
+            >
+              Contactez-nous
+            </a>
           </span>
         </div>
       </section>

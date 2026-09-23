@@ -43,6 +43,7 @@ export default function ListItem({ ref }: { ref: Centre }) {
           onClick={() => trackCenterSelect({ id: ref.id, nameId: ref.name })}
           href={ref.website}
           target="_blank"
+          aria-label={`Accéder au site de ${ref.name} (nouvel onglet)`}
           rel="nofollow sponsored"
           className="text-blue-600 underline"
         >

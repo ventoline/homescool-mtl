@@ -29,7 +29,7 @@ export default function CentreCard({ centre }: { centre: Centre }) {
     if (!map || c.lng == null || c.lat == null) return;
     map.flyTo({
       center: [c.lng, c.lat],
-      zoom: Math.max(map.getZoom(), 6),
+      zoom: Math.max(map.getZoom(), 13),
       speed: 1.2,
       curve: 1.42,
       essential: true,
@@ -65,6 +65,7 @@ export default function CentreCard({ centre }: { centre: Centre }) {
         }
         href={centre.website}
         target="_blank"
+        aria-label={`Accéder au site de ${centre.name} (nouvel onglet)`}
         rel="nofollow sponsored"
         className="text-blue-600 underline"
       >

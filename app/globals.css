@@ -83,15 +83,39 @@ h1 {
 }
 
 .contact-box a {
-  color: var(--color-gray-200);
+  display: inline-block;
+  padding: 0.6em 0.75em;
+  color: var(--color-gray-600);
+  text-decoration: underline;
   font-family: "Poppins", sans-serif !important;
-  transition: color 0.2;
+  transition: color 0.2s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-.contact-box a:hover {
-  color: var(--color-gray-500);
-  font-family: "Poppins", sans-serif !important;
-  transition: color 0.2;
+/* Only real hover devices, so the colour doesn't stick after a tap on mobile */
+@media (hover: hover) {
+  .contact-box a:hover {
+    color: var(--color-gray-800);
+  }
+}
+
+.contact-box a:focus-visible {
+  color: var(--color-gray-800);
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Tap / press feedback */
+.contact-box a:active {
+  color: var(--color-gray-800);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact-box a:active {
+    transform: scale(0.94);
+  }
 }
 
 .note {

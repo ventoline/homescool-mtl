@@ -7,7 +7,6 @@ import MapboxMap from "@/components/map/MapboxMap";
 import AdUnit from "@/components/AdBlock";
 import Image from "next/image";
 import { useData } from "@/components/DataProvider";
-import Link from "next/link";
 
 ("use-client");
 
@@ -118,17 +117,14 @@ export default function Page() {
       {/* contact */}
       <section className="my-2 text-center w-1/2 float-right mt-20">
         <div className="border border-gray-200 p-4 rounded-md bg-white shadow-sm">
-          <span className=" contact-box text-gray-300">
+          <span className=" contact-box text-gray-600">
             Une question? Ajouter votre centre ici? reporter un glitch? <br />
-            <u>
-              <Link
-                href="mailto:leclubelectro@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contactez-nous
-              </Link>
-            </u>
+            <a
+              href="mailto:leclubelectro@gmail.com"
+              aria-label="Contactez-nous par courriel (leclubelectro@gmail.com)"
+            >
+              Contactez-nous
+            </a>
           </span>
         </div>
       </section>
