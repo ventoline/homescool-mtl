@@ -65,7 +65,7 @@ export default function CentreCard({ centre }: { centre: Centre }) {
         }
         href={centre.website}
         target="_blank"
-        aria-label={`Accéder au site de ${centre.name} (nouvel onglet)`}
+        aria-label={`Accéder au site de ${centre.name}`}
         rel="nofollow sponsored"
         className="text-blue-600 underline"
       >

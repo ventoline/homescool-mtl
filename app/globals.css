@@ -17,10 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: leckerli, serif;
-}
-
 /* Body defaults */
 body {
   font-family: "Inter", sans-serif;
@@ -54,14 +50,18 @@ h3 {
 }
 
 h1 {
-  font-family: var(--font-leckerli), cursive;
+  font-family: var(--font-leckerli), cursive, serif;
   text-shadow:
-    2px 2px 3px rgba(255, 255, 255, 0.15),
-    -2px -2px 3px rgba(0, 0, 0, 0.35); /* */ /* Highlight effect */ /* Shadow effect */
+    2px 2px 3px var(--color-gray-700),
+    -1px -1px 0 var(--color-gray-700),
+    1px -1px 0 var(--color-gray-700),
+    -1px 1px 0 var(--color-gray-700),
+    1px 1px 0 #e8070b;
+  /* 1px black outline  -2px -2px 0px rgba(0, 0, 0, 0.35); */ /* */ /* Highlight effect */ /* Shadow effect */
 
   /* 4. Clip the background to the text shape */
-  -webkit-background-clip: text; /* Required for Chrome, Safari */
-  background-clip: text;
+  /* -webkit-background-clip: text;  Required for Chrome, Safari 
+  background-clip: text;*/
 }
 
 .hero {
@@ -88,7 +88,9 @@ h1 {
   color: var(--color-gray-600);
   text-decoration: underline;
   font-family: "Poppins", sans-serif !important;
-  transition: color 0.2s, transform 0.1s;
+  transition:
+    color 0.2s,
+    transform 0.1s;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
